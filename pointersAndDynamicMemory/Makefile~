@@ -1,0 +1,2 @@
+command: command.c
+	gcc -g command.c -o command
