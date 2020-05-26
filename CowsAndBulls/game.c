@@ -34,6 +34,7 @@ int another_game(){
       return 0;
     }
   } while (truthVal[0] != 'y' || truthVal[0] != 'n');
+  return 0;
 }
 
 int blackScore(const int guess[], const int code[]){
@@ -75,7 +76,6 @@ void printScore(const int guess[], const int codes[NO_GUESSES]){
 int main(void){
   int anotherGame = 1;
   int gameNo = 0;
-  int guess[NO_GUESSES];
   int codes[5][NO_GUESSES] = {{1 , 8 , 9 , 2} , {2 , 4 , 6 , 8} , {1 , 9 , 8 , 3} , {7 , 4 , 2 , 1} , {4 , 6 , 8 , 9}};
   do {
     int guess[NO_GUESSES];

@@ -1,2 +1,10 @@
-game: game.c
-	gcc -g game.c -o game
+CC = gcc
+CFLAGS = -Wall -g
+BUILD = game
+
+all: $(BUILD)
+
+clean:
+	/bin/rm -f $(BUILD) *.o core
+
+game: game.o
