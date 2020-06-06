@@ -5,7 +5,7 @@ BUILD = command
 all: $(BUILD)
 
 clean :
-	/bin/rm -f $(BUILD) *.o core
+	/bin/rm -f $(BUILD) *.o core *~
 
 profile: ./command
 	./command 3 60
