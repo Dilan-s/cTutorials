@@ -184,13 +184,16 @@ int parse_eliza_script(struct eliza_state *eliza, const char *path)
       rule->reasmb = clone(value);
       rule->precedence = priority;
       list_insert_front(&eliza->rules, rule);
+      //LEAKFIX
+      free(rule->key);
+      free(rule->decomp);
+      free(rule);
     }
   }
 
   free(decomp);
   free(key);
   fclose(file);
-
   return 0;
 }
 
